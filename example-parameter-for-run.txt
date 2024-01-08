@@ -1,0 +1,17 @@
+run instance on specific port:
+
+mvn spring-boot:run -Dspring-boot.run.arguments="--server.port=8001"
+----------------
+
+run client for show load balancing:
+
+http://localhost:8100/currency-converter-feign/from/EUR/to/INR/quantity/1000
+--------------
+kill run instance proccess:
+
+c:\>netstat -ano | find "8080"
+     TCP    0.0.0.0:8080           0.0.0.0:0              LISTENING       1196
+     TCP    [::]:8080              [::]:0                 LISTENING       1196
+     c:\>taskkill /F /PID 1196
+     SUCCESS: The process with PID 1196 has been terminated.
+
